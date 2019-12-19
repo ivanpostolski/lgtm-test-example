@@ -1,3 +1,3 @@
 public class B {
-    String value;
+    String value = "hello world";
 }

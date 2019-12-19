@@ -6,7 +6,8 @@ public class Main {
 
     void execute(){
         A a = foo();
-        bar(a);
+        B abfield = bar(a);
+        System.out.println(abfield.value);
     }
 
     A foo() {
@@ -15,8 +16,9 @@ public class Main {
         a.bfield = new B();
         return a;
     }
-    void bar(A a) {
+    B bar(A a) {
         //interprocedural use
         B sink = a.bfield;
+        return sink;
     }
 }
